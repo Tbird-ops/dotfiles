@@ -1,0 +1,23 @@
+set debuginfod enabled off
+
+set $load_ext = 1
+
+define btall 
+	thread apply all bt
+end
+
+define init-gef
+	set $load_ext = 0
+	source /home/tbird/tools/gdb_ext/gef-2026.01.py
+end
+document init-gef
+	Initializes GEF (GDB Enhanced Features)
+end
+
+define init-pwn
+	set $load_ext = 0
+	source /home/tbird/tools/gdb_ext/pwndbg/gdbinit.py
+end
+document init-pwn
+  Initializes PwnDBG
+end

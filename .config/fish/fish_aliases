@@ -1,0 +1,19 @@
+alias bash="bash --norc"
+
+alias ls='ls --color=auto'
+alias ll='ls -laFtr'
+alias la='ls -alF'
+
+alias copy='wl-copy'
+alias copylast='fc -ln -1 | cut -c 3- | wl-copy'
+alias paste='wl-paste -n'
+
+alias vol='docker run -it --rm -v $(pwd):/data:ro blacktop/volatility:plugins $argv'
+alias vol3='docker run -it --rm -v $(pwd):/data:ro accenturecifr/volatility3 $argv'
+
+alias vim='nvim'
+
+alias lg='lazygit'
+
+alias open='xdg-open'
+alias kimg='kitten icat'
